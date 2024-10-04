@@ -1,0 +1,7 @@
+{
+    "mode": "eval",
+    "model_id": "bigscience/T0_3B",
+    "epochs": 1,
+    "output_dir":"out/mt5_ko_eval",
+    "per_device_eval_batch_size":32
+}

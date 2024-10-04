@@ -1,0 +1,8 @@
+{
+    "mode": "train",
+    "model_id": "EleutherAI/polyglot-ko-3.8b",
+    "dataset_path":"data/chatex_ko",
+    "epochs": 1,
+    "output_dir":"out/mt5_ko_eval",
+    "per_device_eval_batch_size":16
+}

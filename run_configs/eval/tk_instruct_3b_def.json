@@ -1,0 +1,6 @@
+{
+    "mode": "eval",
+    "model_id": "allenai/tk-instruct-3b-def",
+    "output_dir":"out/mt5_eval",
+    "per_device_eval_batch_size":32
+}
