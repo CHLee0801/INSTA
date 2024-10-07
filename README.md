@@ -36,6 +36,11 @@ pip install wandb
 pip install absl-py
 ```
 
+```
+git clone https://github.com/CHLee0801/INSTA.git
+cd INSTA
+```
+
 ## 1. Download Data
 First, download the P3, BigBench, BBH datasets.
 ```
