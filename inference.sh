@@ -1,9 +1,5 @@
-deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_cluster natural_language_inference --checkpoint_path out/anli_aibts_p2_top_5/checkpoint-1148
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset cb --checkpoint_path out/cb_aibts_p4_top_5/checkpoint-1473
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset copa --checkpoint_path out/copa_aibts_p4_top_5/checkpoint-762
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset hellaswag --checkpoint_path out/hella_aibts_p4_top_5/checkpoint-1533
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset rte --checkpoint_path out/rte_aibts_p4_top_5/checkpoint-1701
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset storycloze --checkpoint_path out/story_aibts_p4_top_5/checkpoint-1242
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset wic --checkpoint_path out/wic_aibts_p4_top_5/checkpoint-1611
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset wsc --checkpoint_path out/wsc_aibts_p4_top_5/checkpoint-1776
-# deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run_p3.py --config run_configs/eval/t0_3b.json --target_dataset winogrande --checkpoint_path out/wino_aibts_p4_top_5/checkpoint-975
+# Inference command for P3 or BigBench
+deepspeed --include localhost:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --master_port 63000 run.py --config run_configs/eval/t0_3b.json --target_cluster natural_language_inference --checkpoint_path google/t5-xl-lm-adapt
+
+# Inference command for NIV2 or BBH
+CUDA_VISIBLE_DEVICES=0 python evaluate_generation.py
