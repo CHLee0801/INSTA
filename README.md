@@ -37,10 +37,18 @@ pip install absl-py
 ```
 
 ## 1. Download Data
-
+First, download the P3, BigBench, BBH datasets.
 ```
-gdown https://drive.google.com/uc?id=1W8tXUZFK-J09kYV1-ZxDOE6QDOrYh_6x
+gdown https://drive.google.com/uc?id=1UvoA4Ri4w7oPnmtYDchGaOwT2Q5oSwKi
 jar xvf data.zip
+```
+Second, process NIV2 datasets.
+```
+cd data/natural_instructions
+git clone https://github.com/allenai/natural-instructions.git
+python generate_dataset.py train
+python generate_dataset_pos.py train
+python generate_dataset_pos.py test
 ```
 
 ## 2. Train any LMs in Huggingface
